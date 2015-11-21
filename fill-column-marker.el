@@ -24,6 +24,7 @@
 ;; Configure a custom column-marker for the "character highlight" that is
 ;; applied to the columns that contain text that exceeds the fill-column width.
 
+(require 'column-marker)
 (defface fill-column-marker `((t (:background ,fill-column-marker-colour)))
   "Face used for the fill column marker.  Usually a background color."
   :group 'faces)
