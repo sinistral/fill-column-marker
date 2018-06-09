@@ -56,7 +56,8 @@ Changing this directly affects only new markers.")
   global-fcm-mode
   fcm-mode
   (lambda ()
-    (when (not (special-buffer-name-p (buffer-name)))
+    (when (not (or (special-buffer-name-p (buffer-name))
+                   (string-prefix-p "magit" (buffer-name))))
         (fcm-mode 1))))
 
 (provide 'fill-column-marker)
